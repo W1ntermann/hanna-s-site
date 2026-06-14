@@ -59,7 +59,7 @@ export default function HomePage() {
             @lukinamarketing
           </div>
           <h1 className="text-[34px] font-bold leading-[1.12] tracking-tight text-foreground md:text-[48px]">
-            Ви запускаєте рекламу, ведете блог, грієте людей контентом, а потім все одно продаєте в особистих з&nbsp;нуля.
+            Ви запускаєте рекламу, ведете блог, грієте людей контентом, а потім все одно продаєте в особистих з&nbsp;нуля
           </h1>
           <p className="mt-6 text-[18px] leading-relaxed text-muted-foreground">
             Знову пояснюєте чим відрізняєтесь від інших, відпрацьовуєте заперечення і знову відповідаєте на запитання{" "}
