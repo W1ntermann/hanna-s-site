@@ -18,7 +18,7 @@ export function SiteFooter() {
               className="h-auto w-[140px] md:w-[160px]"
             />
           </Link>
-          <div className="mt-4 text-sm text-footer-foreground/70">
+          <div className="mt-4 text-base text-footer-foreground/70">
             Перетворюю експертність у систему, яка продає.
           </div>
         </div>
