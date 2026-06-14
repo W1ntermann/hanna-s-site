@@ -10,7 +10,7 @@ const channels = [
     title: "Telegram",
     text: "Найшвидший спосіб відповіді — зазвичай протягом кількох годин.",
     cta: "Написати в Telegram",
-    href: "https://t.me/",
+    href: "https://t.me/Anie_1212",
     accent: true,
   },
   {
@@ -18,7 +18,7 @@ const channels = [
     title: "Instagram",
     text: "Подивіться кейси та напишіть у Direct.",
     cta: "Перейти в Instagram",
-    href: "https://instagram.com/",
+    href: "https://www.instagram.com/lukinamarketing/",
   },
   {
     icon: Mail,
