@@ -95,9 +95,7 @@ export default function HomePage() {
             Це може бути коротка серія відео, продуманий лонгрид або інтерактивний покроковий маршрут — формат підбирається під твій продукт, але суть одна… Це шлях, спроектований за логікою холодного клієнта. Його єдина мета — закрити ключові сумніви людини, викликати довіру та перевести її з режиму «я просто подивлюсь» у стан «мені це треба, куди писати?».
           </Block>
           <Block>Щоб людина не просто «побачила вас», а зрозуміла:</Block>
-        </div>
-
-        <div className="mt-10 space-y-4">
+        </div>        <div className="mt-10 space-y-4">
           {transformations.map((t, i) => (
             <div
               key={i}
@@ -149,6 +147,12 @@ export default function HomePage() {
           </Block>
         </div>
 
+        <h2 className="mt-16 text-[28px] font-bold leading-tight text-foreground md:text-[34px]">
+          Скільки це коштує?
+        </h2>
+        <p className="mt-4 text-[17px] leading-[1.75] text-foreground/85">
+          Ціна питання завжди залежить від того, що у вас вже працює і які деталі потрібно докрутити. Саме тому я спершу дивлюсь на поточну ситуацію.
+        </p>
 
         <div className="mt-10 space-y-4">
           {[

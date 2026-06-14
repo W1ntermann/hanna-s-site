@@ -9,7 +9,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hanna Lukina — Архітектор сенсів",
+    default: "Hanna Lukina — Маркетолог",
     template: "%s — Hanna Lukina",
   },
   description:

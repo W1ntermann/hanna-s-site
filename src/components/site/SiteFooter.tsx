@@ -6,10 +6,10 @@ import { Send, Instagram, Mail } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-footer text-footer-foreground">
+    <footer className="bg-footer text-footer-foreground border-t border-border">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
-          <Link href="/">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="Hanna Lukina"
@@ -82,7 +82,7 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
-      <div className="border-t border-footer-foreground/10">
+      <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-footer-foreground/60 md:flex-row">
           <div>© {new Date().getFullYear()} Hanna Lukina. Всі права захищені.</div>
           <div>Зроблено з увагою до деталей.</div>
