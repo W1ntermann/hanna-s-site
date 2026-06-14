@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Send, Instagram, Mail } from "lucide-react";
 
 export function SiteFooter() {
@@ -8,11 +9,16 @@ export function SiteFooter() {
     <footer className="bg-footer text-footer-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
-          <div className="text-[11px] font-medium uppercase tracking-[0.25em] text-footer-foreground/60">
-            HANNALUKINA
-          </div>
-          <div className="mt-3 text-xl font-semibold">Анна Лукіна</div>
-          <div className="mt-2 text-sm text-footer-foreground/70">
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              alt="Hanna Lukina"
+              width={180}
+              height={48}
+              className="h-auto w-[140px] md:w-[160px]"
+            />
+          </Link>
+          <div className="mt-4 text-sm text-footer-foreground/70">
             Ваш архітектор сенсів. Перетворюю експертність у систему, яка продає.
           </div>
         </div>
