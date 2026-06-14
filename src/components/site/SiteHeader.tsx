@@ -6,9 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
-  { href: "/expert" as const, label: "Експерту" },
   { href: "/blog" as const, label: "Блог" },
-  { href: "/test" as const, label: "Міні-тест на сенси у блозі" },
 ];
 
 export function SiteHeader() {

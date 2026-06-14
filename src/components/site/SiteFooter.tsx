@@ -21,14 +21,8 @@ export function SiteFooter() {
           <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-footer-foreground/60">
             Сторінки
           </div>
-          <Link href="/expert" className="text-footer-foreground/85 hover:text-footer-foreground">
-            Експерту
-          </Link>
           <Link href="/blog" className="text-footer-foreground/85 hover:text-footer-foreground">
             Блог
-          </Link>
-          <Link href="/test" className="text-footer-foreground/85 hover:text-footer-foreground">
-            Міні-тест на сенси
           </Link>
           <Link href="/privacy" className="text-footer-foreground/85 hover:text-footer-foreground">
             Політика конфіденційності
@@ -40,12 +34,21 @@ export function SiteFooter() {
             Контакти
           </div>
           <a
+            href="https://t.me/Anie_1212"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-footer-foreground/85 hover:text-footer-foreground"
+          >
+            <Send className="h-4 w-4" /> Telegram: @Anie_1212
+          </a>
+          <a
             href="mailto:admin@annalukina.top"
             className="inline-flex items-center gap-2 text-footer-foreground/85 hover:text-footer-foreground"
           >
             <Mail className="h-4 w-4" /> admin@annalukina.top
           </a>
-          <span className="text-footer-foreground/70">ФОП АННА ЛУКІНА</span>
+          <span className="text-footer-foreground/70">ФОП Лукіна Анна</span>
+          <span className="text-footer-foreground/70">ЄДРПОУ 3304516306</span>
         </div>
 
         <div className="flex flex-col gap-3">
