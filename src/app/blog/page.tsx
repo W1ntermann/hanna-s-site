@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 
@@ -19,6 +18,7 @@ const posts = [
     date: "10 травня 2026",
     read: "6 хв",
     tag: "Контент",
+    href: "https://t.me/Cod4Sales/209",
   },
   {
     title: "«Скільки коштує?» як симптом",
@@ -27,21 +27,25 @@ const posts = [
     date: "28 квітня 2026",
     read: "8 хв",
     tag: "Продажі",
+    href: "https://t.me/Cod4Sales/185",
   },
   {
-    title: "Маршрут клієнта: 5 точок, де ви його втрачаєте",
-    excerpt: "Карта типових «дір» у воронці експерта та як їх закрити без бюджету на рекламу.",
-    date: "14 квітня 2026",
-    read: "10 хв",
-    tag: "Стратегія",
-  },
-  {
-    title: "Як писати тексти, що відпрацьовують заперечення",
+    title: "Чому одна людина готова купити у вас майже одразу, а інша і через рік не купить?",
     excerpt:
-      "Структура поста, після якого клієнт пише не «а скільки?», а «коли можемо почати?».",
-    date: "2 квітня 2026",
+      "Різниця між «гарячим» і «холодним» клієнтом — і як з цим працювати експерту.",
+    date: "14 квітня 2026",
     read: "7 хв",
+    tag: "Стратегія",
+    href: "https://t.me/Cod4Sales/58",
+  },
+  {
+    title: "Для експертів, які продають свої послуги на консультаціях та не можуть довести клієнта до покупки",
+    excerpt:
+      "Як перестати продавати в особистих повідомленнях з нуля і збудувати систему прогріву.",
+    date: "2 квітня 2026",
+    read: "8 хв",
     tag: "Копірайтинг",
+    href: "https://t.me/Cod4Sales/152",
   },
 ];
 
@@ -58,7 +62,7 @@ export default function BlogPage() {
         <div className="grid gap-6 md:grid-cols-2">
           {posts.map((p) => (
             <article
-              key={p.title}
+              key={p.href}
               className="group flex flex-col rounded-2xl border border-border bg-card p-7 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
             >
               <div className="flex items-center gap-3 text-xs text-muted-foreground">
@@ -71,17 +75,26 @@ export default function BlogPage() {
                 </span>
               </div>
               <h3 className="mt-4 text-xl font-semibold leading-snug text-foreground group-hover:text-primary">
-                {p.title}
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {p.title}
+                </a>
               </h3>
               <p className="mt-3 flex-1 text-[15px] leading-relaxed text-foreground/75">
                 {p.excerpt}
               </p>
-              <Link
-                href="/blog"
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
               >
                 Читати далі <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </article>
           ))}
         </div>

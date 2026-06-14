@@ -19,7 +19,7 @@ export function SiteFooter() {
             />
           </Link>
           <div className="mt-4 text-sm text-footer-foreground/70">
-            Ваш архітектор сенсів. Перетворюю експертність у систему, яка продає.
+            Перетворюю експертність у систему, яка продає.
           </div>
         </div>
 
@@ -29,6 +29,9 @@ export function SiteFooter() {
           </div>
           <Link href="/blog" className="text-footer-foreground/85 hover:text-footer-foreground">
             Блог
+          </Link>
+          <Link href="/offer" className="text-footer-foreground/85 hover:text-footer-foreground">
+            Договір оферти
           </Link>
           <Link href="/privacy" className="text-footer-foreground/85 hover:text-footer-foreground">
             Політика конфіденційності
