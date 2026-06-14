@@ -53,7 +53,7 @@ export function SiteFooter() {
             Соцмережі
           </div>
           <a
-            href="https://t.me/"
+            href="https://t.me/Anie_1212"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition hover:brightness-105"
@@ -61,7 +61,7 @@ export function SiteFooter() {
             <Send className="h-4 w-4" /> Мій Telegram
           </a>
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/lukinamarketing/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-footer-foreground/20 px-4 py-2.5 text-sm font-semibold text-footer-foreground transition hover:bg-footer-foreground/5"

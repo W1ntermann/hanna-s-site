@@ -27,23 +27,23 @@ const transformations = [
 const steps = [
   {
     n: "01",
-    title: "Знаходимо точку втрати",
-    body: "Дивимося на ваші поточні продажі та знаходимо, у який саме момент людина думає «цікаво» але зникає.",
+    title: "Точка зливу",
+    body: "Ми не просто дивимося на ваші продажі загалом. Ми шукаємо конкретний момент, коли холодний клієнт заходить, думає «цікаво» і мовчки свайпає.Лікуємо це місце.",
   },
   {
     n: "02",
-    title: "Проєктуємо фільтр сенсів",
-    body: "Прописуємо маршрут із необхідних кроків, після яких холодний клієнт розуміє: «Мені потрібно саме це і саме зараз».",
+    title: "Фільтр",
+    body: "Витягуємо з вашого досвіду ключові аргументи, факти та кейси, і розставляємо їх у такій послідовності, щоб випадковий перехожий відсіявся сам, а цільовий клієнт відчув: «О, саме моя проблема».",
   },
   {
     n: "03",
-    title: "Пишемо контент, який продає замість вас",
-    body: "Перекладаємо вашу експертність на мову клієнта, щоби тексти закривали заперечення ще до першого «Привіт».",
+    title: "Переклад на мову клієнта",
+    body: "Ми беремо ваш досвід і пакуємо це в текст або сценарій. Він звучить вашим голосом, але тими фразами, які потрапляють у критерії вибору клієнта та розмовляють їхньою мовою. Жодних шаблонів та штучних текстів.",
   },
   {
     n: "04",
-    title: "З'єднуємо все у систему",
-    body: "Налаштовуємо цей конвеєр, тестуємо і лише потім відкриваємо кран із рекламою.",
+    title: "Запуск автопілота",
+    body: "Збираємо все на платформі, перевіряємо, щоб кожен крок плавно вмикав наступний, і лише після цього підключаємо трафік.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -left-24 top-40 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-            Архітектор сенсів
+            @lukinamarketing
           </div>
           <h1 className="text-[34px] font-bold leading-[1.12] tracking-tight text-foreground md:text-[48px]">
             Ви запускаєте рекламу, ведете блог, грієте людей контентом, а потім все одно продаєте в особистих з&nbsp;нуля.
@@ -76,8 +76,7 @@ export default function HomePage() {
 
           <div className="my-10 rounded-2xl border-2 border-primary/70 bg-accent/40 p-7 shadow-[0_8px_30px_-12px_oklch(0.68_0.18_30/0.25)] md:p-9">
             <p className="text-[19px] font-semibold leading-relaxed text-foreground md:text-[21px]">
-              Я збираю систему, яка показує цінність вашої послуги{" "}
-              <span className="text-primary">ЩЕ ДО</span> першого повідомлення в директ.
+              Я збираю систему для теплих заявок "Шлях сенсів". {" "}
             </p>
             <p className="mt-4 text-[16px] leading-relaxed text-foreground/80">
               У результаті приходять не випадкові перехожі, яким просто запитати, а люди, які хочуть обговорити деталі роботи.
@@ -156,8 +155,7 @@ export default function HomePage() {
 
         <div className="mt-12">
           <Block>
-            Ось так замість купи непотрібних дій отримуєте зрозумілий конвеєр. Кожна деталь у ньому крутить наступну,
-            і людина дозріває до покупки сама, ще до того, як ви почнете говорити з нею особисто.
+            Ось так замість купи непотрібних дій ви отримуєте систему, з якою клієнти приходять стабільно, а ви не залежите від охоплень. Де кожна деталь крутить наступну, і людина дозріває до покупки сама, ще до того, як ви почнете говорити з нею особисто. 
           </Block>
         </div>
 
@@ -175,6 +173,31 @@ export default function HomePage() {
           </Block>
         </div>
 
+        <div className="mt-10 space-y-4">
+          {[
+            {
+              n: "1",
+              body: "Нижче — 5 простих питань про поточну ситуацію. Це займе рівно хвилину.",
+            },
+            {
+              n: "2",
+              body: "Після цього я вручну розбираю ваші відповіді, заходжу у ваш блог, дивлюся на ситуацію.",
+            },
+            {
+              n: "3",
+              body: "І повертаюся до вас у месенджер із конкретним голосовим повідомленням або відеорозбором, про те що можна отримати за допомогою системи.",
+            },
+          ].map((s) => (
+            <div
+              key={s.n}
+              className="flex gap-5 rounded-xl border border-border bg-card p-5 transition hover:border-primary/50 hover:shadow-md"
+            >
+              <div className="text-2xl font-bold text-primary md:text-3xl">{s.n}</div>
+              <p className="text-[15px] leading-relaxed text-foreground/80">{s.body}</p>
+            </div>
+          ))}
+        </div>
+
         <div
           id="cta"
           className="mt-12 overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-[oklch(0.62_0.2_25)] p-8 text-center text-primary-foreground shadow-xl md:p-12"
@@ -187,6 +210,9 @@ export default function HomePage() {
           </h3>
           <p className="mx-auto mt-3 max-w-md text-sm opacity-90">
             Хвилина часу — і ви отримаєте персональний розбір замість шаблонної відповіді.
+          </p>
+          <p className="mx-auto mt-3 max-w-md text-sm opacity-80">
+            Це ні до чого вас не зобов'язує. Це мій спосіб показати свій підхід і знайти слабкі місця у продажах.
           </p>
           <a
             href="https://t.me/Anna_Lukina_help_bot?start=6a0ade3d7e307ed0580f66b5"
@@ -208,6 +234,27 @@ export default function HomePage() {
             className="h-auto w-full max-w-2xl rounded-2xl shadow-lg"
             priority
           />
+        </div>
+
+        <div className="mt-14 rounded-2xl border border-border bg-card p-8 text-center shadow-sm md:p-10">
+          <h3 className="text-xl font-bold text-foreground md:text-2xl">
+            Хочете дізнатись про підхід та про мене
+          </h3>
+          <p className="mt-3 text-muted-foreground">
+            Запрошую у мій блог
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            і рекомендую почати з цього 👇
+          </p>
+          <a
+            href="https://t.me/Cod4Sales/186"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition hover:brightness-105"
+          >
+            Переглянути, що там
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </article>
     </SiteLayout>
