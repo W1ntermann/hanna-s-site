@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Система, що пакує ваші сенси у маршрут прогріву клієнта. Перетворюю експертність у систему, яка продає.",
   authors: [{ name: "Hanna Lukina" }],
   openGraph: {
-    title: "Hanna Lukina — Архітектор сенсів",
+    title: "Hanna Lukina — Маркетолог",
     description:
       "Система, що пакує ваші сенси у маршрут прогріву клієнта.",
     type: "website",
