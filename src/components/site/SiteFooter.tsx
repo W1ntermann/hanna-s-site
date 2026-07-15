@@ -43,7 +43,7 @@ export function SiteFooter() {
             Контакти
           </div>
           <a
-            href="https://t.me/Anie_1212"
+            href="https://telegram.me/Anie_1212"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-footer-foreground/85 hover:text-footer-foreground"

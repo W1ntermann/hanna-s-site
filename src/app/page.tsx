@@ -225,7 +225,7 @@ export default function HomePage() {
             і рекомендую почати з цього 👇
           </p>
           <a
-            href="https://t.me/Cod4Sales/186"
+            href="https://telegram.me/Cod4Sales/186"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition hover:brightness-105"

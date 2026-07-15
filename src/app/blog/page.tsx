@@ -18,7 +18,7 @@ const posts = [
     date: "10 травня 2026",
     read: "6 хв",
     tag: "Контент",
-    href: "https://t.me/Cod4Sales/209",
+    href: "https://telegram.me/Cod4Sales/209",
   },
   {
     title: "«Скільки коштує?» як симптом",
@@ -27,7 +27,7 @@ const posts = [
     date: "28 квітня 2026",
     read: "8 хв",
     tag: "Продажі",
-    href: "https://t.me/Cod4Sales/185",
+    href: "https://telegram.me/Cod4Sales/185",
   },
   {
     title: "Чому одна людина готова купити у вас майже одразу, а інша і через рік не купить?",
@@ -36,7 +36,7 @@ const posts = [
     date: "14 квітня 2026",
     read: "7 хв",
     tag: "Стратегія",
-    href: "https://t.me/Cod4Sales/58",
+    href: "https://telegram.me/Cod4Sales/58",
   },
   {
     title: "Для експертів, які продають свої послуги на консультаціях та не можуть довести клієнта до покупки",
@@ -45,7 +45,7 @@ const posts = [
     date: "2 квітня 2026",
     read: "8 хв",
     tag: "Копірайтинг",
-    href: "https://t.me/Cod4Sales/152",
+    href: "https://telegram.me/Cod4Sales/152",
   },
 ];
 

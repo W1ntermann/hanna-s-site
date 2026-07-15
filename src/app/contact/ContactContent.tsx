@@ -10,7 +10,7 @@ const channels = [
     title: "Telegram",
     text: "Найшвидший спосіб відповіді — зазвичай протягом кількох годин.",
     cta: "Написати в Telegram",
-    href: "https://t.me/Anie_1212",
+    href: "https://telegram.me/Anie_1212",
     accent: true,
   },
   {
