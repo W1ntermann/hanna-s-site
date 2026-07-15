@@ -193,7 +193,7 @@ export default function HomePage() {
             Це ні до чого вас не зобов'язує. Це мій спосіб показати свій підхід і знайти слабкі місця у ваших продажах.
           </p>
           <a
-            href="https://t.me/Anna_Lukina_help_bot?start=6a0ade3d7e307ed0580f66b5"
+            href="https://telegram.me/Anna_Lukina_help_bot?start=6a0c1357c67e1cec5d03e6be"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary shadow-lg transition hover:bg-white/95"
