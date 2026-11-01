@@ -24,16 +24,20 @@ const journey = ["Реклама", "Пояснення цінності", "До�
 export default function HomePage() {
   return (
     <SiteLayout>
-      <section className="relative overflow-hidden border-b border-[var(--border)]/30 bg-[var(--bg-elevated)]">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[var(--accent)]/10 blur-3xl" />
-        <div className="pointer-events-none absolute -left-24 top-40 h-72 w-72 rounded-full bg-[var(--accent-light)]/10 blur-3xl" />
-        <div className="mx-auto max-w-[1120px] px-4 py-20 md:py-32">
+      <section className="relative isolate overflow-hidden border-b border-[var(--border-strong)]/60 bg-[radial-gradient(ellipse_at_75%_35%,rgba(59,156,255,0.16),transparent_42%),linear-gradient(135deg,#0A1224_0%,#040813_65%)]">
+        <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[var(--accent)]/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 left-1/4 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+        <div className="mx-auto max-w-[1120px] px-4 py-24 md:py-36">
           <div className="mb-6 eyebrow">@lukinamarketing</div>
-          <h1 className="max-w-4xl text-[clamp(2.25rem,8vw,4.5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)]">
-            Задовбав пошук клієнтів?
+          <h1 className="max-w-4xl text-[clamp(2.5rem,8vw,5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)]">
+            Задовбав{" "}
+            <span className="bg-gradient-to-r from-[var(--accent-light)] to-cyan-300 bg-clip-text text-transparent [filter:drop-shadow(0_0_22px_rgba(59,156,255,0.3))]">
+              пошук клієнтів?
+            </span>
           </h1>
-          <p className="mt-6 text-[clamp(1.25rem,3vw,1.75rem)] font-semibold leading-[1.4] text-[var(--text-muted)]">
-            👇 Тут вихід на гарячі та кваліфіковані заявки
+          <p className="mt-7 inline-flex rounded-full border border-[var(--border-strong)] bg-[rgba(59,156,255,0.08)] px-5 py-3 text-[clamp(1.1rem,3vw,1.5rem)] font-semibold leading-[1.4] text-[var(--text)] shadow-[0_0_30px_-12px_var(--accent-glow)]">
+            <span className="mr-2 text-[var(--accent-light)]">↓</span>
+            Тут вихід на гарячі та кваліфіковані заявки
           </p>
         </div>
       </section>
@@ -52,11 +56,12 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-10 rounded-[24px] border border-[var(--border-strong)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-8">
+        <div className="mt-10 rounded-[24px] border border-[var(--border-strong)] bg-[linear-gradient(135deg,rgba(59,156,255,0.14),rgba(10,18,36,0.94)_55%)] p-6 shadow-[0_0_36px_-20px_var(--accent-glow),0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-8">
           <p className="text-[19px] font-semibold leading-relaxed text-[var(--text)] md:text-[21px]">
-            Потрібна система, яка бере на себе 80% рутини і готує людину до
-            співпраці ще до того, як ви спишетесь. Уявіть, як вона працює на вас
-            щодня:
+            Потрібна система, яка бере на себе{" "}
+            <span className="text-[var(--accent-light)]">80% рутини</span> і
+            готує людину до співпраці ще до того, як ви спишетесь. Уявіть, як
+            вона працює на вас щодня:
           </p>
           <ul className="mt-6 space-y-4 text-[16px] leading-relaxed text-[var(--text-muted)]">
             {benefits.map((benefit) => (
@@ -87,9 +92,9 @@ export default function HomePage() {
           {journey.map((step, index) => (
             <div
               key={step}
-              className="flex items-center gap-4 rounded-[20px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-5"
+              className="group flex items-center gap-4 rounded-[20px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_28px_-12px_var(--accent-glow)]"
             >
-              <span className="text-xl font-bold text-[var(--accent-light)]">
+              <span className="text-xl font-bold text-[var(--accent-light)] transition-[filter] group-hover:[filter:drop-shadow(0_0_8px_var(--accent-glow))]">
                 {index < journey.length - 1 ? "→" : "✓"}
               </span>
               <span className="font-medium text-[var(--text)]">{step}</span>
@@ -110,7 +115,7 @@ export default function HomePage() {
 
         <section
           id="cta"
-          className="mt-16 overflow-hidden rounded-[32px] border border-[var(--border)] bg-[var(--bg-elevated)] p-6 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-10"
+          className="mt-16 overflow-hidden rounded-[32px] border border-[var(--border-strong)] bg-[radial-gradient(ellipse_at_top_right,rgba(59,156,255,0.16),transparent_48%),var(--bg-elevated)] p-6 shadow-[0_0_48px_-24px_var(--accent-glow),0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-10"
         >
           <h2 className="text-[clamp(1.75rem,5vw,2.5rem)] font-bold leading-tight text-[var(--text)]">
             Не хочете купувати кота в мішку? Тоді давайте перевіримо на вашій
@@ -132,7 +137,7 @@ export default function HomePage() {
             href="https://forms.gle/vuDmbQdVeveQZvJaA"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--accent-light)] to-cyan-300 px-8 py-4 text-sm font-bold text-[#04101F] no-underline shadow-[0_0_28px_-8px_var(--accent-glow)] transition-all duration-250 hover:shadow-[0_0_38px_-4px_var(--accent-glow)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent-light)] active:translate-y-[3px]"
           >
             👉 Отримати персональний розбір
             <ArrowRight className="h-4 w-4" />
@@ -151,7 +156,7 @@ export default function HomePage() {
             потрібен зрозумілий маршрут до рішення. Тому збираю систему, де
             контент, шлях клієнта, реклама та прогрів працюють разом.
           </p>
-          <div className="mt-8 overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)]">
+          <div className="mt-8 overflow-hidden rounded-[24px] border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-[0_0_36px_-22px_var(--accent-glow)]">
             <Image
               src="/images/for-hero.jpg"
               alt="Hanna Lukina про досвід у маркетингу та систему роботи з клієнтами"
@@ -166,7 +171,7 @@ export default function HomePage() {
             Відгуки та результати клієнтів
           </h3>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 md:p-4">
+            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
               <Image
                 src="/images/FeedBack.jpg"
                 alt="Відгук клієнтки про результати співпраці"
@@ -179,7 +184,7 @@ export default function HomePage() {
                 Відгук клієнтки про результати роботи
               </figcaption>
             </figure>
-            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 md:p-4">
+            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
               <Image
                 src="/images/Result.jpg"
                 alt="Результати рекламних кампаній: заявки та ціна за лід"
