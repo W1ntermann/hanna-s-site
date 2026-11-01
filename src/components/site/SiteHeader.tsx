@@ -5,15 +5,13 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const navItems = [
-  { href: "/blog" as const, label: "Блог" },
-];
+const navItems: { href: string; label: string }[] = [];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[rgba(4,8,19,0.80)] backdrop-blur supports-[backdrop-filter]:bg-[rgba(4,8,19,0.60)]">
+    <header className="sticky top-0 z-50 w-full border-b border-[var(--border-strong)] bg-[#040813]/90 backdrop-blur-xl supports-[backdrop-filter]:bg-[#040813]/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
         <Link href="/" className="flex items-center">
           <Image
@@ -21,7 +19,7 @@ export function SiteHeader() {
             alt="Hanna Lukina"
             width={180}
             height={48}
-            className="h-auto w-[160px] md:w-[180px]"
+            className="h-auto w-[160px] md:w-[180px] rounded-xl bg-white p-2 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             priority
           />
         </Link>
@@ -41,7 +39,7 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="rounded-full bg-accent px-8 py-4 text-sm font-semibold text-on-accent shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
+            className="rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
           >
             Написати в особисті
           </Link>
@@ -58,7 +56,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-[var(--border)] bg-[rgba(4,8,19,0.90)] md:hidden">
+        <div className="border-t border-[var(--border-strong)] bg-[#040813]/95 md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 md:px-6">
             {navItems.map((item) => (
               <Link
@@ -73,7 +71,7 @@ export function SiteHeader() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-accent px-8 py-4 text-center text-sm font-semibold text-on-accent"
+              className="mt-2 rounded-full bg-white px-8 py-4 text-center text-sm font-semibold text-[var(--bg)]"
             >
               Написати в особисті
             </Link>

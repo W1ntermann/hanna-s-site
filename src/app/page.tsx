@@ -196,7 +196,7 @@ export default function HomePage() {
             href="https://telegram.me/Anna_Lukina_help_bot?start=6a0c1357c67e1cec5d03e6be"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-semibold text-on-accent shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
           >
             Знайти слабкі місця
             <ArrowRight className="h-4 w-4" />
@@ -228,7 +228,7 @@ export default function HomePage() {
             href="https://telegram.me/Cod4Sales/186"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-semibold text-on-accent shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
           >
             Переглянути, що там
             <ArrowRight className="h-4 w-4" />

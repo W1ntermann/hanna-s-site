@@ -27,9 +27,6 @@ export function SiteFooter() {
           <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-light)]/80">
             Сторінки
           </div>
-          <Link href="/blog" className="text-[var(--text-muted)] hover:text-[var(--text)]">
-            Блог
-          </Link>
           <Link href="/offer" className="text-[var(--text-muted)] hover:text-[var(--text)]">
             Договір оферти
           </Link>
@@ -68,7 +65,7 @@ export function SiteFooter() {
             href="https://t.me/Anie_1212"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-semibold text-on-accent shadow-[0_5px_0_var(--accent-deep)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
           >
             <Send className="h-4 w-4" /> Мій Telegram
           </a>

@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "rounded-full px-8 py-4 bg-accent text-on-accent font-semibold shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]",
+          "rounded-full px-8 py-4 bg-white text-[var(--bg)] font-semibold shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]",
         destructive:
           "rounded-full px-8 py-4 bg-destructive text-destructive-foreground font-semibold shadow-[0_5px_0_#b91c1c] active:translate-y-[3px] active:shadow-[0_2px_0_#b91c1c]",
         outline:
