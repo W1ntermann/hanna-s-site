@@ -1,239 +1,199 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import type { ReactNode } from "react";
 
 export const metadata = {
-  title: "Hanna Lukina — Система прогріву клієнтів до заявки",
+  title: "Hanna Lukina — Гарячі та кваліфіковані заявки",
   description:
-    "Збираю систему, яка показує цінність вашої послуги ще до першого повідомлення в директ. Замість «скільки коштує?» — «коли можемо почати?»",
+    "Система, яка бере на себе 80% рутини та готує клієнтів до співпраці ще до першого повідомлення.",
   openGraph: {
-    title: "Hanna Lukina — Маркетолог",
-    description: "Система, що пакує ваші сенси у маршрут прогріву клієнта.",
+    title: "Hanna Lukina — Гарячі та кваліфіковані заявки",
+    description:
+      "Персональний розбір блогу та готова схема шляху клієнта під вашу нішу.",
   },
 };
 
-function Block({ children }: { children: ReactNode }) {
-  return <p className="text-[17px] leading-[1.55] text-[var(--text-muted)]">{children}</p>;
-}
-
-const transformations = [
-  { from: "«Цікаво, але потім»", to: "«О. Це прямо про мою ситуацію»" },
-  { from: "«Зараз знову продаватимуть»", to: "«Здається, мені це реально потрібно»" },
-  { from: "«Скільки коштує?»", to: "«Окей. Як мені це отримати?»" },
-  { from: "Година листування, пояснення і «я подумаю»", to: "«Коли можемо почати?»" },
+const benefits = [
+  "Відсіває халявщиків та любителів тільки питати ціни ще на вході.",
+  "Пояснює цінність послуги так, що не доводиться виправдовувати вартість співпраці.",
+  "Проводить людину за логічним шляхом від «хто ти?» до «Хочу! Коли починаємо?».",
 ];
 
-const steps = [
-  {
-    n: "01",
-    title: "Точка зливу",
-    body: "Ми не просто дивимося на ваші продажі загалом. Ми шукаємо конкретний момент, коли холодний клієнт заходить, думає «цікаво» і мовчки свайпає.Лікуємо це місце.",
-  },
-  {
-    n: "02",
-    title: "Фільтр",
-    body: "Витягуємо з вашого досвіду ключові аргументи, факти та кейси, і розставляємо їх у такій послідовності, щоб випадковий перехожий відсіявся сам, а цільовий клієнт відчув: «О, саме моя проблема».",
-  },
-  {
-    n: "03",
-    title: "Переклад на мову клієнта",
-    body: "Ми беремо ваш досвід і пакуємо це в текст або сценарій. Він звучить вашим голосом, але тими фразами, які потрапляють у критерії вибору клієнта та розмовляють їхньою мовою. Жодних шаблонів та штучних текстів.",
-  },
-  {
-    n: "04",
-    title: "Запуск автопілота",
-    body: "Збираємо все на платформі, перевіряємо, щоб кожен крок плавно вмикав наступний, і лише після цього підключаємо трафік.",
-  },
-];
+const journey = ["Реклама", "Пояснення цінності", "Довіра", "Усвідомлене рішення"];
 
 export default function HomePage() {
   return (
     <SiteLayout>
-      {/* Hero */}
       <section className="relative overflow-hidden border-b border-[var(--border)]/30 bg-[var(--bg-elevated)]">
         <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[var(--accent)]/10 blur-3xl" />
         <div className="pointer-events-none absolute -left-24 top-40 h-72 w-72 rounded-full bg-[var(--accent-light)]/10 blur-3xl" />
         <div className="mx-auto max-w-[1120px] px-4 py-20 md:py-32">
-          <div className="mb-6 eyebrow">
-            @lukinamarketing
-          </div>
-          <h1 className="text-[clamp(2.25rem,8vw,4.5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)]">
-            Ви запускаєте рекламу, ведете блог, грієте людей контентом, а потім все одно продаєте в особистих з&nbsp;нуля
+          <div className="mb-6 eyebrow">@lukinamarketing</div>
+          <h1 className="max-w-4xl text-[clamp(2.25rem,8vw,4.5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)]">
+            Задовбав пошук клієнтів?
           </h1>
-          <p className="mt-6 text-[17px] leading-[1.55] text-[var(--text-muted)]">
-            Знову пояснюєте чим відрізняєтесь від інших, відпрацьовуєте заперечення і знову відповідаєте на запитання{" "}
-            <span className="font-semibold text-[var(--text)]">«а скільки коштує?»</span>.
+          <p className="mt-6 text-[clamp(1.25rem,3vw,1.75rem)] font-semibold leading-[1.4] text-[var(--text-muted)]">
+            👇 Тут вихід на гарячі та кваліфіковані заявки
           </p>
         </div>
       </section>
 
-      <article className="mx-auto max-w-[1120px] px-4 py-24 md:py-32">
-        <div className="space-y-6">
-          <Block>
-            Хоча насправді продаж має відбуватися набагато раніше, ще до того, як людина взагалі наважилася вам написати.
-          </Block>
-
-          <div className="my-10 rounded-[24px] border border-[var(--border-strong)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 md:p-7 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px]">
-            <p className="text-[19px] font-semibold leading-relaxed text-[var(--text)] md:text-[21px]">
-              Я збираю систему для теплих заявок{" "}
-              <span className="font-bold">"Шлях сенсів"</span>. Вона працює як фільтр і її завдання — видати людині всю суть і масштаб вашого підходу ще до того, як вона подумає написати «Привіт».
-            </p>
-            <p className="mt-4 text-[16px] leading-relaxed text-[var(--text-muted)]">
-              У результаті приходять не випадкові перехожі, яким просто запитати, а люди, які хочуть обговорити деталі роботи.
-              Замість «Скільки коштує?» ви отримуєте:{" "}
-              <span className="font-semibold text-[var(--text)]">«Хочу це, коли можна почати?»</span>
-            </p>
-          </div>
+      <article className="mx-auto max-w-[900px] px-4 py-20 md:py-28">
+        <div className="space-y-6 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+          <p>Якщо ви вже все перепробували:</p>
+          <p>
+            палили бюджети на рекламу, гріли контентом, будували лід-магніти,
+            чат-боти та застосовували секретні воронки, які мали 100500%
+            спрацювати,
+          </p>
+          <p>але не отримали клієнтів.</p>
+          <p>
+            Вам потрібна не нова порція контенту і не ще одна технічна мутотня.
+          </p>
         </div>
 
-        <h2 className="mt-20 text-[clamp(2.25rem,8vw,4.5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)]">
-          Як це працює?
-        </h2>
-        <div className="mt-6 space-y-6">
-          <Block>
-            Це може бути коротка серія відео, продуманий лонгрид або інтерактивний покроковий маршрут — формат підбирається під твій продукт, але суть одна… Це шлях, спроектований за логікою холодного клієнта. Його єдина мета — закрити ключові сумніви людини, викликати довіру та перевести її з режиму «я просто подивлюсь» у стан «мені це треба, куди писати?».
-          </Block>
-          <Block>Щоб людина не просто «побачила вас», а зрозуміла:</Block>
-        </div>        <div className="mt-10 space-y-4">
-          {transformations.map((t, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-1 gap-3 rounded-[24px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 transition-all duration-250 hover:border-[var(--border-strong)] hover:-translate-y-[3px] hover:shadow-[0_0_40px_-8px_var(--accent-glow)] md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-5"
-            >
-              <div>
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)]/60">
-                  Було
-                </div>
-                <div className="mt-1 text-[var(--text-muted)]/70 line-through decoration-[var(--text-muted)]/50">
-                  {t.from}
-                </div>
-              </div>
-              <ArrowRight className="hidden h-5 w-5 text-[var(--accent-light)] md:block" />
-              <div>
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-light)]">
-                  Стало
-                </div>
-                <div className="mt-1 font-semibold text-[var(--text)]">{t.to}</div>
-              </div>
-            </div>
-          ))}
+        <div className="mt-10 rounded-[24px] border border-[var(--border-strong)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-8">
+          <p className="text-[19px] font-semibold leading-relaxed text-[var(--text)] md:text-[21px]">
+            Потрібна система, яка бере на себе 80% рутини і готує людину до
+            співпраці ще до того, як ви спишетесь. Уявіть, як вона працює на вас
+            щодня:
+          </p>
+          <ul className="mt-6 space-y-4 text-[16px] leading-relaxed text-[var(--text-muted)]">
+            {benefits.map((benefit) => (
+              <li key={benefit} className="flex gap-3">
+                <span aria-hidden="true">✅</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="mt-16 space-y-6">
-          <Block>
-            <span className="font-semibold">І тут важливий момент.</span> Це не історія про «давайте ще контент навалимо». Продажі в блогах зазвичай ламаються в одних і тих самих непомітних місцях. Щоб людина доходила до «коли починаємо?», ми будуємо цей шлях у чотири кроки:
-          </Block>
-        </div>
-
-        <div className="mt-10 space-y-5">
-          {steps.map((s) => (
-            <div
-              key={s.n}
-              className="flex gap-5 rounded-[24px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 transition-all duration-250 hover:border-[var(--border-strong)] hover:-translate-y-[3px] hover:shadow-[0_0_40px_-8px_var(--accent-glow)]"
-            >
-              <div className="text-3xl font-bold text-[var(--accent-light)] md:text-4xl">{s.n}</div>
-              <div>
-                <h3 className="text-lg font-semibold text-[var(--text)]">{s.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-[var(--text-muted)]">{s.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12">
-          <Block>
-            Ось так замість купи непотрібних дій ви отримуєте систему, з якою клієнти приходять стабільно, а ви не залежите від охоплень. Де кожна деталь крутить наступну, і людина дозріває до покупки сама, ще до того, як ви почнете говорити з нею особисто. 
-          </Block>
-        </div>
-
-        <h2 className="mt-16 text-[clamp(2.25rem,8vw,4.5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)]">
-          Скільки це коштує?
-        </h2>
-        <p className="mt-4 text-[17px] leading-[1.75] text-foreground/85">
-          Ціна питання завжди залежить від того, що у вас вже працює і які деталі потрібно докрутити. Саме тому я спершу дивлюсь на поточну ситуацію.
+        <p className="mt-8 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+          <span className="font-semibold text-[var(--text)]">Результат:</span>{" "}
+          На зідзвон або в приватні приходять ті, хто вже розуміє, за що платить,
+          і готовий обговорювати умови. Без 40-хвилинних розмов з людьми, у яких
+          немає грошей навіть на передоплату.
         </p>
 
-        <div className="mt-10 space-y-4">
-          {[
-            {
-              n: "1",
-              body: "Нижче — 5 простих питань про поточну ситуацію. Це займе рівно хвилину.",
-            },
-            {
-              n: "2",
-              body: "Після цього я вручну розбираю ваші відповіді, заходжу у ваш блог, дивлюся на ситуацію.",
-            },
-            {
-              n: "3",
-              body: "І повертаюся до вас у месенджер із конкретним голосовим повідомленням або відеорозбором, про те що можна отримати за допомогою системи.",
-            },
-          ].map((s) => (
+        <h2 className="mt-20 text-[clamp(2rem,6vw,3.5rem)] font-[800] leading-tight tracking-tight text-[var(--text)]">
+          Як це працює?
+        </h2>
+        <p className="mt-6 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+          Замість постінгу і очікувань, коли аудіторія сама прогріється, ми один
+          раз збираємо ваше рішення у шлях клієнта:
+        </p>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          {journey.map((step, index) => (
             <div
-              key={s.n}
-              className="flex gap-5 rounded-[24px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 transition-all duration-250 hover:border-[var(--border-strong)] hover:-translate-y-[3px] hover:shadow-[0_0_40px_-8px_var(--accent-glow)]"
+              key={step}
+              className="flex items-center gap-4 rounded-[20px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-5"
             >
-              <div className="text-2xl font-bold text-[var(--accent-light)] md:text-3xl">{s.n}</div>
-              <p className="text-[15px] leading-relaxed text-[var(--text-muted)]">{s.body}</p>
+              <span className="text-xl font-bold text-[var(--accent-light)]">
+                {index < journey.length - 1 ? "→" : "✓"}
+              </span>
+              <span className="font-medium text-[var(--text)]">{step}</span>
             </div>
           ))}
         </div>
 
-        <div
-          id="cta"
-          className="mt-12 overflow-hidden rounded-[32px] border border-[var(--border)] bg-[var(--bg-elevated)] p-6 md:p-10 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px]"
-        >
-          <div className="mx-auto mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[var(--accent)]/10">
-            <ArrowRight className="h-6 w-6 text-[var(--accent-light)]" />
-          </div>
-          <h3 className="text-xl font-bold text-[var(--text)] md:text-2xl">
-            Готові побачити, слабкі місця у ваших продажах?
-          </h3>
-          <p className="mx-auto mt-3 max-w-md text-sm text-[var(--text-muted)]/80">
-            Це ні до чого вас не зобов'язує. Це мій спосіб показати свій підхід і знайти слабкі місця у ваших продажах.
+        <div className="mt-10 rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-6 md:p-8">
+          <p className="text-[17px] leading-[1.65] text-[var(--text-muted)]">
+            <span className="font-semibold text-[var(--text)]">Приклад:</span> у
+            ніші психології з чеком від 60$ за год система дала +3 кваліфіковані
+            заявки на день, без жодного допису в стрічці.
           </p>
+          <p className="mt-4 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+            Таких кейсів багато, і кожного разу я адаптую схему під ваші дані.
+          </p>
+        </div>
+
+        <section
+          id="cta"
+          className="mt-16 overflow-hidden rounded-[32px] border border-[var(--border)] bg-[var(--bg-elevated)] p-6 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-10"
+        >
+          <h2 className="text-[clamp(1.75rem,5vw,2.5rem)] font-bold leading-tight text-[var(--text)]">
+            Не хочете купувати кота в мішку? Тоді давайте перевіримо на вашій
+            ніші👇
+          </h2>
+          <p className="mt-5 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+            Дайте відповідь всього на 6 коротких запитань.
+          </p>
+          <p className="mt-3 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+            Я особисто вивчу ваш блог і надішлю короткий відео розбір, де
+            покажу:
+          </p>
+          <ul className="mt-5 space-y-3 text-[16px] leading-relaxed text-[var(--text-muted)]">
+            <li>▪️ Де ви зараз втрачаєте гарячих клієнтів</li>
+            <li>▪️ Як перезібрати оффер, щоб відсіяти халявщиків</li>
+            <li>▪️ Готову схему шляху клієнта під вашу нішу</li>
+          </ul>
           <a
             href="https://forms.gle/vuDmbQdVeveQZvJaA"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px]"
           >
-            Знайти слабкі місця
+            👉 Отримати персональний розбір
             <ArrowRight className="h-4 w-4" />
           </a>
-        </div>
+          <p className="mt-6 text-sm leading-relaxed text-[var(--text-muted)]">
+            Роблю це вручну, тому беру лише 2 експерта на тиждень.
+          </p>
+        </section>
 
-        <div className="mt-16 flex justify-center">
-          <Image
-            src="/images/for-hero.jpg"
-            alt="Hanna Lukina"
-            width={800}
-            height={533}
-            className="h-auto w-full max-w-2xl rounded-[24px] shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)]"
-            priority
-          />
-        </div>
+        <section className="mt-20">
+          <h2 className="text-[clamp(2rem,6vw,3.5rem)] font-[800] leading-tight tracking-tight text-[var(--text)]">
+            Експертність і результати
+          </h2>
+          <p className="mt-4 text-[17px] leading-[1.65] text-[var(--text-muted)]">
+            За 7+ років у маркетингу, воронках та контенті я зрозуміла: клієнту
+            потрібен зрозумілий маршрут до рішення. Тому збираю систему, де
+            контент, шлях клієнта, реклама та прогрів працюють разом.
+          </p>
+          <div className="mt-8 overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)]">
+            <Image
+              src="/images/for-hero.jpg"
+              alt="Hanna Lukina про досвід у маркетингу та систему роботи з клієнтами"
+              width={1920}
+              height={1080}
+              sizes="(max-width: 900px) 100vw, 900px"
+              className="h-auto w-full"
+            />
+          </div>
 
-        <div className="mt-14 rounded-[24px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 md:p-8 text-center shadow-[0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px]">
-          <h3 className="text-xl font-bold text-[var(--text)] md:text-2xl">
-            Хочете дізнатись про підхід та про мене
+          <h3 className="mt-14 text-2xl font-bold text-[var(--text)] md:text-3xl">
+            Відгуки та результати клієнтів
           </h3>
-          <p className="mt-3 text-[var(--text-muted)]">
-            Запрошую у мій блог
-          </p>
-          <p className="mt-1 text-sm text-[var(--text-muted)]">
-            і рекомендую почати з цього 👇
-          </p>
-          <a
-            href="https://telegram.me/Cod4Sales/186"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
-          >
-            Переглянути, що там
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 md:p-4">
+              <Image
+                src="/images/FeedBack.jpg"
+                alt="Відгук клієнтки про результати співпраці"
+                width={1080}
+                height={714}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-auto w-full rounded-xl"
+              />
+              <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
+                Відгук клієнтки про результати роботи
+              </figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 md:p-4">
+              <Image
+                src="/images/Result.jpg"
+                alt="Результати рекламних кампаній: заявки та ціна за лід"
+                width={1280}
+                height={377}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-auto w-full rounded-xl"
+              />
+              <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
+                Приклад результатів рекламних кампаній
+              </figcaption>
+            </figure>
+          </div>
+        </section>
       </article>
     </SiteLayout>
   );

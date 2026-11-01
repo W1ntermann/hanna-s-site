@@ -15,11 +15,11 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.png"
+            src="/images/newLogo.png"
             alt="Hanna Lukina"
             width={180}
             height={48}
-            className="h-auto w-[160px] md:w-[180px] rounded-xl bg-white p-2 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            className="h-auto w-[160px] md:w-[180px] rounded-xl"
             priority
           />
         </Link>
