@@ -19,7 +19,7 @@ export function SiteFooter() {
             />
           </Link>
           <div className="mt-4 text-base text-[var(--text-muted)]/80">
-            Перетворюю експертність у систему, яка продає.
+            Система, яка продає експертність на ізі.
           </div>
         </div>
 
