@@ -113,6 +113,35 @@ export default function HomePage() {
           </p>
         </div>
 
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
+            <Image
+              src="/images/FeedBack.jpg"
+              alt="Відгук клієнтки про результати співпраці"
+              width={1080}
+              height={714}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="h-auto w-full rounded-xl"
+            />
+            <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
+              Відгук клієнтки про результати роботи
+            </figcaption>
+          </figure>
+          <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
+            <Image
+              src="/images/Result.jpg"
+              alt="Результати рекламних кампаній: заявки та ціна за лід"
+              width={1280}
+              height={377}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="h-auto w-full rounded-xl"
+            />
+            <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
+              Приклад результатів рекламних кампаній
+            </figcaption>
+          </figure>
+        </div>
+
         <section
           id="cta"
           className="mt-16 overflow-hidden rounded-[32px] border border-[var(--border-strong)] bg-[radial-gradient(ellipse_at_top_right,rgba(59,156,255,0.16),transparent_48%),var(--bg-elevated)] p-6 shadow-[0_0_48px_-24px_var(--accent-glow),0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-10"
@@ -167,37 +196,6 @@ export default function HomePage() {
             />
           </div>
 
-          <h3 className="mt-14 text-2xl font-bold text-[var(--text)] md:text-3xl">
-            Відгуки та результати клієнтів
-          </h3>
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
-              <Image
-                src="/images/FeedBack.jpg"
-                alt="Відгук клієнтки про результати співпраці"
-                width={1080}
-                height={714}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-auto w-full rounded-xl"
-              />
-              <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
-                Відгук клієнтки про результати роботи
-              </figcaption>
-            </figure>
-            <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
-              <Image
-                src="/images/Result.jpg"
-                alt="Результати рекламних кампаній: заявки та ціна за лід"
-                width={1280}
-                height={377}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-auto w-full rounded-xl"
-              />
-              <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
-                Приклад результатів рекламних кампаній
-              </figcaption>
-            </figure>
-          </div>
         </section>
       </article>
     </SiteLayout>
