@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div>
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/newLogo.png"
               alt="Hanna Lukina"
               width={180}
               height={48}
