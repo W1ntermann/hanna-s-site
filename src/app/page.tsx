@@ -110,7 +110,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-6 md:p-8">
+        <div className="mt-10 rounded-[24px] border border-[var(--border-strong)] bg-[radial-gradient(ellipse_at_top_right,rgba(59,156,255,0.12),transparent_48%),var(--bg-elevated)] p-6 shadow-[0_0_36px_-22px_var(--accent-glow)] md:p-8">
           <p className="text-[17px] leading-[1.65] text-[var(--text-muted)]">
             <span className="font-semibold text-[var(--text)]">Приклад:</span> у
             ніші психології з чеком від 60$ за год система дала +3 кваліфіковані
@@ -119,35 +119,34 @@ export default function HomePage() {
           <p className="mt-4 text-[17px] leading-[1.65] text-[var(--text-muted)]">
             Таких кейсів багато, і кожного разу я адаптую схему під ваші дані.
           </p>
-        </div>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
-            <Image
-              src="/images/FeedBack.jpg"
-              alt="Відгук клієнтки про результати співпраці"
-              width={1080}
-              height={714}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="h-auto w-full rounded-xl"
-            />
-            <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
-              Відгук клієнтки про результати роботи
-            </figcaption>
-          </figure>
-          <figure className="overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--bg-elevated)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
-            <Image
-              src="/images/Result.jpg"
-              alt="Результати рекламних кампаній: заявки та ціна за лід"
-              width={1280}
-              height={377}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="h-auto w-full rounded-xl"
-            />
-            <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
-              Приклад результатів рекламних кампаній
-            </figcaption>
-          </figure>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <figure className="overflow-hidden rounded-[20px] border border-[var(--border)] bg-[rgba(4,8,19,0.65)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
+              <Image
+                src="/images/FeedBack.jpg"
+                alt="Відгук клієнтки про результати співпраці"
+                width={1080}
+                height={714}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-auto w-full rounded-xl"
+              />
+              <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
+                Відгук клієнтки про результати роботи
+              </figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-[20px] border border-[var(--border)] bg-[rgba(4,8,19,0.65)] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_0_32px_-14px_var(--accent-glow)] md:p-4">
+              <Image
+                src="/images/Result.jpg"
+                alt="Результати рекламних кампаній: заявки та ціна за лід"
+                width={1280}
+                height={377}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-auto w-full rounded-xl"
+              />
+              <figcaption className="px-2 pb-2 pt-4 text-sm text-[var(--text-muted)]">
+                Приклад результатів рекламних кампаній
+              </figcaption>
+            </figure>
+          </div>
         </div>
 
         <section
