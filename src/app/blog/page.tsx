@@ -58,23 +58,23 @@ export default function BlogPage() {
         subtitle="Короткі розбори та практики, які допомагають експертам збирати власну систему прогріву."
       />
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-[1120px] px-4 py-24 md:py-32">
         <div className="grid gap-6 md:grid-cols-2">
           {posts.map((p) => (
             <article
               key={p.href}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-7 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
+              className="group flex flex-col rounded-[24px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-6 transition-all duration-250 hover:border-[var(--border-strong)] hover:-translate-y-[3px] hover:shadow-[0_0_40px_-8px_var(--accent-glow)] backdrop-blur-[14px]"
             >
-              <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="rounded-full bg-primary/10 px-2.5 py-1 font-semibold uppercase tracking-wider text-primary">
+              <div className="flex items-center gap-3 text-xs text-[var(--text-muted)]">
+                <span className="rounded-full border border-[var(--border)] bg-[rgba(59,156,255,0.12)] px-2.5 py-1 font-semibold uppercase tracking-wider text-[var(--accent-light)]">
                   {p.tag}
                 </span>
                 <span>{p.date}</span>
                 <span className="inline-flex items-center gap-1">
-                  <Clock className="h-3 w-3" /> {p.read}
+                  <Clock className="h-3 w-3 text-[var(--accent-light)]" /> {p.read}
                 </span>
               </div>
-              <h3 className="mt-4 text-xl font-semibold leading-snug text-foreground group-hover:text-primary">
+              <h3 className="mt-4 text-xl font-semibold leading-snug text-[var(--text)] group-hover:text-[var(--accent-light)]">
                 <a
                   href={p.href}
                   target="_blank"
@@ -84,16 +84,16 @@ export default function BlogPage() {
                   {p.title}
                 </a>
               </h3>
-              <p className="mt-3 flex-1 text-[15px] leading-relaxed text-foreground/75">
+              <p className="mt-3 flex-1 text-[15px] leading-[1.55] text-[var(--text-muted)]">
                 {p.excerpt}
               </p>
               <a
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-light)]"
               >
-                Читати далі <ArrowRight className="h-4 w-4" />
+                Читати далі <ArrowRight className="h-4 w-4 text-[var(--accent-light)]" />
               </a>
             </article>
           ))}

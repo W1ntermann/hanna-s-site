@@ -5,23 +5,25 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-all duration-250 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        default:
+          "rounded-full px-8 py-4 bg-accent text-on-accent font-semibold shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]",
+        destructive:
+          "rounded-full px-8 py-4 bg-destructive text-destructive-foreground font-semibold shadow-[0_5px_0_#b91c1c] active:translate-y-[3px] active:shadow-[0_2px_0_#b91c1c]",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "rounded-full px-8 py-4 border border-border-strong bg-transparent text-accent-light hover:bg-[rgba(59,156,255,0.12)]",
+        secondary: "rounded-full px-8 py-4 bg-surface text-text font-semibold hover:bg-[rgba(255,255,255,0.08)]",
+        ghost: "rounded-full px-8 py-4 bg-transparent text-accent-light hover:bg-[rgba(59,156,255,0.12)]",
+        link: "text-accent-light underline-offset-4 hover:underline hover:text-text",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: "h-auto text-sm",
+        sm: "h-auto rounded-md px-3 text-xs",
+        lg: "h-auto rounded-md px-8",
+        icon: "h-9 w-9 rounded-full",
       },
     },
     defaultVariants: {

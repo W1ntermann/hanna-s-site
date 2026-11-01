@@ -22,18 +22,18 @@ export function PageHero({
   subtitle?: string;
 }) {
   return (
-    <section className="border-b border-border/60 bg-gradient-to-b from-accent/40 to-background">
-      <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
+    <section className="border-b border-[var(--border)]/40 bg-[var(--bg-elevated)]">
+      <div className="mx-auto max-w-[1120px] px-4 py-24 text-center md:py-32">
         {eyebrow && (
-          <div className="mb-4 inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+          <div className="mb-6 eyebrow">
             {eyebrow}
           </div>
         )}
-        <h1 className="text-[34px] font-bold leading-[1.1] tracking-tight text-foreground md:text-[48px]">
+        <h1 className="text-[clamp(2.25rem,8vw,4.5rem)] font-[800] leading-[1.02] tracking-tight text-[var(--text)] md:text-[clamp(2.25rem,8vw,4.5rem)]">
           {title}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-[17px] leading-[1.55] text-[var(--text-muted)]">
             {subtitle}
           </p>
         )}

@@ -38,7 +38,7 @@ export function ContactContent() {
         subtitle="Розкажіть коротко про вашу ситуацію — і ми оберемо найкращий формат співпраці."
       />
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-[1120px] px-4 py-24 md:py-32">
         <div className="grid gap-5 md:grid-cols-3">
           {channels.map((c) => (
             <a
@@ -47,31 +47,31 @@ export function ContactContent() {
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
               onClick={() => trackEvent("Contact", { channel: c.title })}
-              className={`group flex flex-col rounded-2xl border p-7 transition hover:-translate-y-0.5 hover:shadow-lg ${
+              className={`group flex flex-col rounded-[24px] border p-7 transition-all duration-250 hover:-translate-y-[3px] hover:shadow-[0_0_40px_-8px_var(--accent-glow)] backdrop-blur-[14px] ${
                 c.accent
-                  ? "border-primary/40 bg-accent/40 hover:border-primary"
-                  : "border-border bg-card hover:border-primary/40"
+                  ? "border-[var(--border-strong)] bg-[rgba(59,156,255,0.10)] hover:border-[var(--border-strong)]"
+                  : "border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] hover:border-[var(--border-strong)]"
               }`}
             >
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <c.icon className="h-5 w-5" />
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[rgba(59,156,255,0.10)] text-[var(--accent-light)]">
+                <c.icon className="h-5 w-5 text-[var(--accent-light)]" />
               </div>
-              <h3 className="mt-5 text-lg font-semibold text-foreground">{c.title}</h3>
-              <p className="mt-2 flex-1 text-[15px] leading-relaxed text-foreground/75">{c.text}</p>
-              <span className="mt-5 text-sm font-semibold text-primary group-hover:underline">
+              <h3 className="mt-5 text-lg font-semibold text-[var(--text)]">{c.title}</h3>
+              <p className="mt-2 flex-1 text-[15px] leading-[1.55] text-[var(--text-muted)]">{c.text}</p>
+              <span className="mt-5 text-sm font-semibold text-[var(--accent-light)] group-hover:text-[var(--text)]">
                 {c.cta} →
               </span>
             </a>
           ))}
         </div>
 
-        <div className="mt-12 rounded-2xl border border-border bg-card p-8 text-center md:p-10">
-          <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Реквізити</div>
-          <div className="mt-3 text-lg font-semibold text-foreground">ФОП АННА ЛУКІНА</div>
+        <div className="mt-12 rounded-[24px] border border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.10)] to-[rgba(10,18,36,0.85)] p-8 text-center md:p-10 backdrop-blur-[14px]">
+          <div className="text-sm uppercase tracking-[0.2em] text-[var(--accent-light)]/80">Реквізити</div>
+          <div className="mt-3 text-lg font-semibold text-[var(--text)]">ФОП АННА ЛУКІНА</div>
           <a
             href="mailto:admin@annalukina.top"
             onClick={() => trackEvent("Contact", { channel: "Email (footer)" })}
-            className="mt-1 inline-block text-primary hover:underline"
+            className="mt-1 inline-block text-[var(--accent-light)] hover:underline hover:text-[var(--text)]"
           >
             admin@annalukina.top
           </a>

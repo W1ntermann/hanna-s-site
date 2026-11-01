@@ -13,8 +13,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[rgba(4,8,19,0.80)] backdrop-blur supports-[backdrop-filter]:bg-[rgba(4,8,19,0.60)]">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/logo.png"
@@ -26,12 +26,12 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-9 text-sm font-medium text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-9 text-sm font-medium text-text-muted md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="relative transition-colors hover:text-foreground"
+              className="relative transition-colors hover:text-text"
             >
               {item.label}
             </Link>
@@ -41,7 +41,7 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:shadow-md hover:brightness-105"
+            className="rounded-full bg-accent px-8 py-4 text-sm font-semibold text-on-accent shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
           >
             Написати в особисті
           </Link>
@@ -50,7 +50,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-text md:hidden"
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -58,14 +58,14 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
+        <div className="border-t border-[var(--border)] bg-[rgba(4,8,19,0.90)] md:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 md:px-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
+                className="rounded-[24px] px-4 py-3 text-sm font-medium text-text-muted hover:bg-[rgba(59,156,255,0.12)] hover:text-text"
               >
                 {item.label}
               </Link>
@@ -73,7 +73,7 @@ export function SiteHeader() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground"
+              className="mt-2 rounded-full bg-accent px-8 py-4 text-center text-sm font-semibold text-on-accent"
             >
               Написати в особисті
             </Link>
