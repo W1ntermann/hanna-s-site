@@ -50,7 +50,11 @@ export default function HomePage() {
             чат-боти та застосовували секретні воронки, які мали 100500%
             спрацювати,
           </p>
-          <p>але не отримали клієнтів.</p>
+          <p>
+            <span className="font-semibold text-[var(--accent-light)] [text-shadow:0_0_14px_var(--accent-glow)]">
+              але не отримали клієнтів.
+            </span>
+          </p>
           <p>
             Вам потрібна не нова порція контенту і не ще одна технічна мутотня.
           </p>
@@ -58,7 +62,11 @@ export default function HomePage() {
 
         <div className="mt-10 rounded-[24px] border border-[var(--border-strong)] bg-[linear-gradient(135deg,rgba(59,156,255,0.14),rgba(10,18,36,0.94)_55%)] p-6 shadow-[0_0_36px_-20px_var(--accent-glow),0_10px_40px_-12px_rgba(0,0,0,0.6)] backdrop-blur-[14px] md:p-8">
           <p className="text-[19px] font-semibold leading-relaxed text-[var(--text)] md:text-[21px]">
-            Потрібна система, яка бере на себе{" "}
+            Потрібна{" "}
+            <span className="bg-gradient-to-r from-[var(--accent-light)] to-cyan-300 bg-clip-text font-bold text-transparent [filter:drop-shadow(0_0_12px_rgba(59,156,255,0.35))]">
+              система
+            </span>
+            , яка бере на себе{" "}
             <span className="text-[var(--accent-light)]">80% рутини</span> і
             готує людину до співпраці ще до того, як ви спишетесь. Уявіть, як
             вона працює на вас щодня:
@@ -168,7 +176,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--accent-light)] to-cyan-300 px-8 py-4 text-sm font-bold text-[#04101F] no-underline shadow-[0_0_28px_-8px_var(--accent-glow)] transition-all duration-250 hover:shadow-[0_0_38px_-4px_var(--accent-glow)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent-light)] active:translate-y-[3px]"
           >
-            👉 Отримати персональний розбір
+            👉 Отримати розбір
             <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-6 text-sm leading-relaxed text-[var(--text-muted)]">
@@ -177,14 +185,6 @@ export default function HomePage() {
         </section>
 
         <section className="mt-20">
-          <h2 className="text-[clamp(2rem,6vw,3.5rem)] font-[800] leading-tight tracking-tight text-[var(--text)]">
-            Експертність і результати
-          </h2>
-          <p className="mt-4 text-[17px] leading-[1.65] text-[var(--text-muted)]">
-            За 7+ років у маркетингу, воронках та контенті я зрозуміла: клієнту
-            потрібен зрозумілий маршрут до рішення. Тому збираю систему, де
-            контент, шлях клієнта, реклама та прогрів працюють разом.
-          </p>
           <div className="mt-8 overflow-hidden rounded-[24px] border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-[0_0_36px_-22px_var(--accent-glow)]">
             <Image
               src="/images/for-hero.jpg"
