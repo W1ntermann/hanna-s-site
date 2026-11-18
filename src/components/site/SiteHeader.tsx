@@ -5,7 +5,9 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const navItems: { href: string; label: string }[] = [];
+const navItems: { href: string; label: string }[] = [
+  { href: "/invitation", label: "PRO LEADGEN" },
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);

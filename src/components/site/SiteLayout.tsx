@@ -19,7 +19,7 @@ export function PageHero({
 }: {
   eyebrow?: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | ReactNode;
 }) {
   return (
     <section className="border-b border-[var(--border)]/40 bg-[var(--bg-elevated)]">

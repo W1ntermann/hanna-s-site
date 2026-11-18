@@ -33,6 +33,9 @@ export function SiteFooter() {
           <Link href="/privacy" className="text-[var(--text-muted)] hover:text-[var(--text)]">
             Політика конфіденційності
           </Link>
+          <Link href="/invitation" className="text-[var(--text-muted)] hover:text-[var(--text)]">
+            PRO LEADGEN
+          </Link>
         </div>
 
         <div className="flex flex-col gap-3 text-sm">
