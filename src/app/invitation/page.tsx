@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight, Gem, MessageCircle, Send, ShieldCheck, ChartNoAxesCombined } from "lucide-react";
+import { ArrowUpRight, Brain, BookOpen, MessageCircle, Send } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 
 export const metadata: Metadata = {
@@ -19,19 +19,46 @@ const telegramUrl = "https://t.me/+BX_IRfmNH0gyMDky";
 
 const benefits = [
   {
-    icon: Gem,
-    title: "Корисні матеріали",
-    description: "Практичні знання та інструменти для роботи з клієнтами.",
+    id: "materials",
+    icon: BookOpen,
+    title: (
+      <>
+        Корисні <span className="font-semibold text-[var(--text)]">матеріали</span>
+      </>
+    ),
+    description: (
+      <>
+        Практичні <span className="font-semibold text-[var(--text)]">знання</span> та <span className="font-semibold text-[var(--text)]">інструменти</span> для роботи з клієнтами.
+      </>
+    ),
   },
   {
-    icon: ChartNoAxesCombined,
-    title: "Розбір логіки",
-    description: "Розуміння того, як працює лідогенерація та продажі.",
+    id: "logic",
+    icon: Brain,
+    title: (
+      <>
+        Розбір <span className="font-semibold text-[var(--text)]">логіки</span>
+      </>
+    ),
+    description: (
+      <>
+        Розуміння того, як працює <span className="font-semibold text-[var(--text)]">лідогенерація</span> та продажі.
+      </>
+    ),
   },
   {
+    id: "chat",
     icon: MessageCircle,
-    title: "Чат спілкування",
-    description: "Обмін досвідом, думками та професійними інсайтами.",
+    title: (
+      <>
+        Чат <span className="font-semibold text-[var(--text)]">спілкування</span>
+      </>
+    ),
+    description: (
+      <>
+        Обмін <span className="font-semibold text-[var(--text)]">досвідом</span>, думками та професійними <span className="font-semibold text-[var(--text)]">інсайтами</span>.
+      </>
+    ),
   },
 ];
 
@@ -40,19 +67,15 @@ export default function InvitationPage() {
     <SiteLayout>
       <section className="relative z-10 mx-auto max-w-[880px] px-6 py-12 md:py-20 rounded-[32px] border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-[0_0_60px_-24px_var(--accent-glow)] backdrop-blur-[24px]">
         <Image
-          src="/images/forLeadGen.jpg"
+          src="/images/leadGenNew.jpg"
           alt="LUKINA | PRO LEADGEN"
           width={1584}
           height={396}
           priority
-          className="mx-auto max-w-[640px] w-full h-auto rounded-[20px] object-cover border border-[var(--border)] mb-10 md:mb-12"
+          className="mx-auto w-full h-auto rounded-[20px] object-cover border border-[var(--border)] mb-10 md:mb-12"
         />
 
         <div className="text-center space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-[rgba(59,156,255,0.08)] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-light)] backdrop-blur-[14px]">
-            <Send className="h-3 w-3" fill="currentColor" />
-            <span>LUKINA | PRO LEADGEN</span>
-          </div>
 
           <h1 className="text-[clamp(1.75rem,6vw,2.5rem)] font-bold leading-tight text-[var(--text)]">
             Канал для таргетологів
@@ -70,7 +93,7 @@ export default function InvitationPage() {
             href={telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--bg)] shadow-[0_5px_0_var(--accent-deep)] shadow-[0_12px_30px_-8px_var(--accent-glow)] transition-all duration-250 active:translate-y-[3px] active:shadow-[0_2px_0_var(--accent-deep)]"
+            className="mt-8 inline-flex items-center justify-center gap-3 rounded-full bg-[#0088cc] px-8 py-4 text-sm font-semibold text-white shadow-[0_5px_0_#006fa3] shadow-[0_12px_30px_-8px_rgba(0,136,204,0.35)] transition-all duration-250 hover:bg-[#006fa3] active:translate-y-[3px] active:shadow-[0_2px_0_#005a8a]"
           >
             <span className="flex items-center justify-center">
               <Send className="h-4 w-4" fill="currentColor" />
@@ -81,14 +104,11 @@ export default function InvitationPage() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="group flex flex-col items-center text-center rounded-[24px] border p-6 transition-all duration-250 hover:-translate-y-[2px] hover:shadow-[0_0_30px_-8px_var(--accent-glow)] backdrop-blur-[14px] border-[var(--border)] bg-gradient-to-br from-[rgba(59,156,255,0.08)] to-[rgba(10,18,36,0.6)] hover:border-[var(--border-strong)]"
-              >
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[rgba(59,156,255,0.10)] text-[var(--accent-light)] mb-4">
-                  <benefit.icon className="h-5 w-5 text-[var(--accent-light)]" />
+              <div key={benefit.id} className="flex flex-col items-center gap-3 text-center">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[rgba(59,156,255,0.10)] text-[var(--accent-light)]">
+                  <benefit.icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-[var(--text)] mb-2">
+                <h3 className="text-lg font-semibold text-[var(--text)]">
                   {benefit.title}
                 </h3>
                 <p className="text-[14px] leading-[1.5] text-[var(--text-muted)]">
