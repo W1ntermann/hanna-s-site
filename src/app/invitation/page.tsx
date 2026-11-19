@@ -64,7 +64,7 @@ export default function InvitationPage() {
         <p className="mx-auto mt-4 max-w-[600px] text-[16px] leading-[1.6] text-[var(--text-muted)]">
           Про лідген, що доносить до потенційного клієнта цінність{" "}
           <span className="text-[var(--text)] font-semibold">
-            роботу саме з
+            роботи саме з
           </span>{" "}
           <span className="text-[var(--text)] font-semibold">
             тобою
