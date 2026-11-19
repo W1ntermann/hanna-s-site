@@ -22,12 +22,7 @@ const benefits = [
     id: "materials",
     title: (
       <>
-        Корисні <span className="font-semibold text-[var(--text)]">матеріали</span>
-      </>
-    ),
-    description: (
-      <>
-        Практичні <span className="font-semibold text-[var(--text)]">знання</span> та <span className="font-semibold text-[var(--text)]">інструменти</span> для роботи з клієнтами.
+        + корисні <span className="font-semibold text-[var(--text)]">матеріали</span>
       </>
     ),
   },
@@ -35,12 +30,7 @@ const benefits = [
     id: "logic",
     title: (
       <>
-        Розбір <span className="font-semibold text-[var(--text)]">логіки</span>
-      </>
-    ),
-    description: (
-      <>
-        Розуміння того, як працює <span className="font-semibold text-[var(--text)]">лідогенерація</span> та продажі.
+        + розбір <span className="font-semibold text-[var(--text)]">логіки</span>
       </>
     ),
   },
@@ -48,12 +38,7 @@ const benefits = [
     id: "chat",
     title: (
       <>
-        Чат <span className="font-semibold text-[var(--text)]">спілкування</span>
-      </>
-    ),
-    description: (
-      <>
-        Обмін <span className="font-semibold text-[var(--text)]">досвідом</span>, думками та професійними <span className="font-semibold text-[var(--text)]">інсайтами</span>.
+        + чат <span className="font-semibold text-[var(--text)]">спілкування</span>
       </>
     ),
   },
@@ -62,26 +47,31 @@ const benefits = [
 export default function InvitationPage() {
   return (
     <SiteLayout>
-      <div className="mx-auto max-w-[880px] px-6 py-12 md:py-20 text-center space-y-10">
         <Image
           src="/images/leadGenNew.jpg"
           alt="LUKINA | PRO LEADGEN"
           width={1584}
           height={396}
           priority
-          className="mx-auto w-full h-auto rounded-[20px] object-cover border border-[var(--border)] mb-10 md:mb-12"
+          className="w-full h-auto object-cover mb-10 md:mb-12"
         />
 
-        <h1 className="text-[clamp(1.75rem,6vw,2.5rem)] font-bold leading-tight text-[var(--text)]">
+        <div className="mx-auto max-w-[880px] px-6 py-12 md:py-20 text-center space-y-10">
+          <h1 className="text-[clamp(1.75rem,6vw,2.5rem)] font-bold leading-tight text-[var(--text)]">
           Канал для таргетологів
         </h1>
 
         <p className="mx-auto mt-4 max-w-[600px] text-[16px] leading-[1.6] text-[var(--text-muted)]">
-          Про лідген, що доносить до потенційного клієнта цінність роботи саме з{" "}
-          <span className="font-semibold text-[var(--text)] [text-shadow:0_0_14px_var(--accent-glow)]">
+          Про лідген, що доносить до потенційного клієнта цінність{" "}
+          <span className="text-[var(--text)] font-semibold">
+            роботу саме з
+          </span>{" "}
+          <span className="text-[var(--text)] font-semibold">
             тобою
+          </span>{" "}
+          <span className="text-[var(--text)] font-semibold">
+            ще до першого контакту
           </span>
-          ще до першого контакту.
         </p>
 
         <a
@@ -100,9 +90,6 @@ export default function InvitationPage() {
               <h3 className="text-base font-semibold text-[var(--text)] mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-[13px] leading-[1.5] text-[var(--text-muted)]">
-                {benefit.description}
-              </p>
             </div>
           ))}
         </div>
