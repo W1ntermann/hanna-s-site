@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Cormorant_Garamond } from "next/font/google";
 import Script from "next/script";
 import { META_PIXEL_ID } from "@/lib/meta-pixel";
 import "./globals.css";
@@ -7,6 +7,11 @@ import "./globals.css";
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-accent",
 });
 
 export const metadata: Metadata = {
@@ -34,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="uk" className={montserrat.variable}>
+    <html lang="uk" className={`${montserrat.variable} ${cormorantGaramond.variable}`}>
       <body className="antialiased">
         {children}
 

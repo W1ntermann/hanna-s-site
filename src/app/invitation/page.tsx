@@ -22,7 +22,7 @@ const benefits = [
     id: "materials",
     title: (
       <>
-        + корисні <span className="font-semibold text-[var(--text)]">матеріали</span>
+        + корисні матеріали <span className="font-semibold text-[var(--text)]"></span>
       </>
     ),
   },
@@ -69,8 +69,9 @@ export default function InvitationPage() {
           <span className="text-[var(--text)] font-semibold">
             тобою
           </span>{" "}
-          <span className="text-[var(--text)] font-semibold">
-            ще до першого контакту
+          <span className="text-[var(--text)]">
+            <span className="font-semibold uppercase">ЩЕ ДО</span>{" "}
+            <span className="font-[var(--font-accent)]">першого контакту</span>
           </span>
         </p>
 
