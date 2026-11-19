@@ -22,7 +22,7 @@ const benefits = [
     id: "materials",
     title: (
       <>
-        + корисні матеріали <span className="font-semibold text-[var(--text)]"></span>
+        + корисні <span className="font-semibold text-[var(--text)]">матеріали</span>
       </>
     ),
   },
@@ -88,7 +88,7 @@ export default function InvitationPage() {
         <div className="mt-12 flex flex-row gap-6 justify-center">
           {benefits.map((benefit) => (
             <div key={benefit.id} className="text-center flex-1 max-w-[240px]">
-              <h3 className="text-base font-semibold text-[var(--text)] mb-2">
+              <h3 className="text-sm font-semibold leading-none text-[var(--text)] mb-2">
                 {benefit.title}
               </h3>
             </div>
